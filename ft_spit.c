@@ -1,70 +1,6 @@
-#include <libft.h>
+#include "libft.h"
 #include <stdlib.h>
 #include <stdio.h>
-
-// char *ft_substr(char const *s, unsigned int start, size_t len)
-// {
-//         size_t i;
-//         size_t j;
-//         char *str;
-
-//         str = (char *)malloc(sizeof(*s) * (len + 1));
-//         if (!str)
-//                 return (NULL);
-//         i = 0;
-//         j = 0;
-//         while (s[i])
-//         {
-//                 if (i >= start && j < len)
-//                 {
-//                         str[j] = s[i];
-//                         j++;
-//                 }
-//                 i++;
-//         }
-//         str[j] = 0;
-//         return (str);
-// }
-
-// int ft_count(char const *s, char c)
-// {
-//         unsigned int i;
-//         unsigned int j;
-
-//         i = 0;
-//         j = 1;
-//         while (s[i])
-//         {
-//                 if (s[i] == c)
-//                         j++;
-//                 i++;
-//         }
-// }
-
-// char **ft_split(char const *s, char c)
-// {
-//         char **s2;
-//         unsigned int i;
-//         unsigned int start;
-//         unsigned int k;
-//         unsigned int count;
-
-//         i = 0;
-//         start = 0;
-//         k = 0;
-//         *s2 = malloc(count*sizeof(char));
-//         while (s[i])
-//         {
-//                 start = i;
-//                 if (s[i] == c)
-//                 {
-//                         ft_substr(s2[k], start, i);
-//                         k++;
-//                         start = i + 1;
-//                 }
-//                 i++;
-//         }
-// }
 
 int ft_words_nbr(char const *s, char c)
 {
@@ -100,6 +36,30 @@ int ft_words_len(char const *s, char c)
 char **ft_split(char const *s, char c)
 {
         char **s2;
+        unsigned int i;
+        unsigned int j;
+        unsigned int start;
+        unsigned int words_nbr;
+        unsigned int words_len;
+
+        i = 0;
+        j = 0;
+        start = 0;
+        words_nbr = ft_words_nbr(s, c) + 1;
+        s2 = (char **)malloc(words_nbr * sizeof(char));
+        while (s[i])
+        {
+                start = i;
+                words_len = ft_words_len(s, c) + 1;
+                s2[j] = (char *)malloc(words_len * sizeof(char));
+                if (s[i] == c)
+                {
+                        ft_strlcpy(s2[j], &s[i], i);
+                        j++;
+                        start = i + 1;
+                }
+                i++;
+        }
 }
 
 int main(void)
