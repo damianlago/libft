@@ -14,17 +14,17 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t			i;
-	unsigned char	c[len];
-
-	i = 0;
 	if (dst == NULL || src == NULL)
 		return (NULL);
-	while (i < len)
+	if (dst > src)
 	{
-		c[i] = ((unsigned char *)src)[i];
-		((unsigned char *)dst)[i] = c[i];
-		i++;
+		while (len > 0)
+		{
+			((char *)dst)[len - 1] = ((char *)src)[len - 1];
+			len--;
+		}
 	}
+	else
+		ft_memcpy(dst, src, len);	
 	return (dst);
 }
