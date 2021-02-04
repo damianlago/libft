@@ -1,14 +1,20 @@
-#include <libft.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dlago-mo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/02/04 15:04:16 by dlago-mo          #+#    #+#             */
+/*   Updated: 2021/02/04 15:04:32 by dlago-mo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int ft_tolower(int c)
-{
-        if (c >= 65 && c <= 90)
-                return (c + 32);
-        return (c);
-}
+#include "libft.h"
 
-int main(void)
+int		ft_tolower(int c)
 {
-        int c = 'A';
-        printf("%d", ft_tolower(c));
+	if (c >= 65 && c <= 90)
+		return (c + 32);
+	return (c);
 }

@@ -1,14 +1,20 @@
-#include <libft.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dlago-mo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/02/04 15:04:43 by dlago-mo          #+#    #+#             */
+/*   Updated: 2021/02/04 15:05:00 by dlago-mo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int ft_toupper(int c)
-{
-        if (c >= 97 && c <= 123)
-                return (c - 32);
-        return (c);
-}
+#include "libft.h"
 
-int main(void)
+int		ft_toupper(int c)
 {
-        int c = 'a';
-        printf("%d", ft_tolower(c));
+	if (c >= 97 && c <= 123)
+		return (c - 32);
+	return (c);
 }

@@ -1,12 +1,25 @@
-#include <libft.h>
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dlago-mo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/02/04 14:34:45 by dlago-mo          #+#    #+#             */
+/*   Updated: 2021/02/04 16:48:40 by dlago-mo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void *ft_memmove(void *dst, const void *src, size_t len)
+#include "libft.h"
+
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char c[len];
-	size_t i;
+	size_t			i;
+	unsigned char	c[len];
 
 	i = 0;
+	if (dst == NULL || src == NULL)
+		return (NULL);
 	while (i < len)
 	{
 		c[i] = ((unsigned char *)src)[i];
@@ -14,13 +27,4 @@ void *ft_memmove(void *dst, const void *src, size_t len)
 		i++;
 	}
 	return (dst);
-}
-
-int main(void)
-{
-	unsigned char dst[] = "Pepe";
-	unsigned char src[] = "Hola";
-	size_t n = 4;
-	printf("%s", ft_memmove(dst, src, n));
-	return (0);
 }

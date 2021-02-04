@@ -1,7 +1,19 @@
-#include <libft.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dlago-mo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/02/04 14:32:18 by dlago-mo          #+#    #+#             */
+/*   Updated: 2021/02/04 16:29:28 by dlago-mo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 #include <stdlib.h>
 
-void *ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t i;
 
@@ -12,12 +24,4 @@ void *ft_memcpy(void *dst, const void *src, size_t n)
 		i++;
 	}
 	return (dst);
-}
-
-int main(void)
-{
-	char src[5] = "Hola";
-	char dst[5] = "";
-	printf("%s", ft_memcpy(dst, src, 2));
-	printf("%s", memcpy(dst, src, 2));
 }

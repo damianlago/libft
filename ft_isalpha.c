@@ -1,16 +1,23 @@
-#include <libft.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dlago-mo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/02/04 14:57:52 by dlago-mo          #+#    #+#             */
+/*   Updated: 2021/02/04 15:01:37 by dlago-mo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int ft_isalpha(int c)
-{
-        if (((unsigned char)c >= 'A' && (unsigned char)c <= 'Z') || ((unsigned char)c >= 'a' && (unsigned char)c <= 'z'))
-                return (1);
-        return (0);
-}
+#include "libft.h"
 
-int main(void)
+int		ft_isalpha(int c)
 {
-        int c = 'A';
-        printf("%d", ft_isalpha(c));
-        printf("%d", isalpha(c));
-        return (0);
+	unsigned char a;
+
+	a = (unsigned char)c;
+	if ((a >= 'A' && a <= 'Z') || (a >= 'a' && a <= 'z'))
+		return (1);
+	return (0);
 }

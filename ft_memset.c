@@ -1,7 +1,18 @@
-#include <libft.h>
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dlago-mo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/02/04 14:30:40 by dlago-mo          #+#    #+#             */
+/*   Updated: 2021/02/04 16:18:06 by dlago-mo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void *ft_memset(void *b, int c, size_t len)
+#include "libft.h"
+
+void	*ft_memset(void *b, int c, size_t len)
 {
 	size_t i;
 
@@ -9,14 +20,4 @@ void *ft_memset(void *b, int c, size_t len)
 	while (i < len)
 		((unsigned char *)b)[i++] = (unsigned char)c;
 	return (b);
-}
-
-int main(void)
-{
-	char b[] = "Hola";
-	int c = 'a';
-	size_t len = 2;
-	printf("%s\n", ft_memset(b, c, len));
-	printf("%s", memset(b, c, len));
-	return (0);
 }

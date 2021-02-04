@@ -1,25 +1,28 @@
-#include <libft.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dlago-mo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/02/04 14:46:21 by dlago-mo          #+#    #+#             */
+/*   Updated: 2021/02/04 14:47:10 by dlago-mo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 #include <stdlib.h>
 
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-        unsigned int i;
+	unsigned int i;
 
-        i = 0;
-        while (i <= ft_strlen(s))
-        {
-                if (s[i] == ((unsigned char)c))
-                        return (&((char *)s)[i]);
-                i++;
-        }
-        return NULL;
-}
-
-int main(void)
-{
-        char s[] = "Hola";
-        int c = 'o';
-        printf("%s", ft_strchr(s, c));
-        printf("%s", strchr(s, c));
-        return (0);
+	i = 0;
+	while (i <= ft_strlen(s))
+	{
+		if (s[i] == ((unsigned char)c))
+			return (&((char *)s)[i]);
+		i++;
+	}
+	return (NULL);
 }

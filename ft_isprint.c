@@ -1,13 +1,20 @@
-#include <libft.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dlago-mo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/02/04 15:03:43 by dlago-mo          #+#    #+#             */
+/*   Updated: 2021/02/04 15:04:02 by dlago-mo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int ft_isprint(int c)
-{
-        if ((unsigned char)c >= 32 && (unsigned char)c <= 126)
-                return (1);
-        return (0);
-}
+#include "libft.h"
 
-int main(void)
+int		ft_isprint(int c)
 {
-        return (0);
+	if ((unsigned char)c >= 32 && (unsigned char)c <= 126)
+		return (1);
+	return (0);
 }
