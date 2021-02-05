@@ -6,7 +6,7 @@
 /*   By: dlago-mo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 14:34:45 by dlago-mo          #+#    #+#             */
-/*   Updated: 2021/02/04 16:48:40 by dlago-mo         ###   ########.fr       */
+/*   Updated: 2021/02/05 12:30:16 by dlago-mo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		}
 	}
 	else
-		ft_memcpy(dst, src, len);	
+		ft_memcpy(dst, src, len);
 	return (dst);
 }

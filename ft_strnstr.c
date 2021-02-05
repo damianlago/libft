@@ -6,7 +6,7 @@
 /*   By: dlago-mo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 14:52:56 by dlago-mo          #+#    #+#             */
-/*   Updated: 2021/02/04 18:10:47 by dlago-mo         ###   ########.fr       */
+/*   Updated: 2021/02/05 13:42:35 by dlago-mo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,15 @@
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t i;
-	size_t j;
 
-	i = 0;
-	if (needle == '\0')
+	if (*needle == '\0')
 		return ((char *)haystack);
-	while (haystack[i] != '\0' && i < len)
+	i = ft_strlen(needle);
+	while (*haystack != '\0' && len-- >= i)
 	{
-		j = 0;
-		while (haystack[i + j] == needle[j])
-		{
-			j++;
-			if (needle[j] == '\0')
-				return (&((char *)haystack)[i]);
-		}
-		i++;
+		if ((*haystack == *needle) && ft_memcmp(haystack, needle, i) == 0)
+			return ((char *)haystack);
+		haystack++;
 	}
 	return (NULL);
 }
