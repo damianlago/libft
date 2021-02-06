@@ -5,7 +5,7 @@
 ---
 
 ## Getting started
-```
+```c
 $ make 
 // This will produce the file libft.a, which you can link to your project.
 
@@ -17,7 +17,7 @@ $ make fclean
 
 ## Functions included
 ### Mem functions
-```
+```c
 /* memset function writes len bytes of value c (converted to an unsigned char) 
 	to the string b. */
 void				*ft_memset(void *str, int c, size_t n);
@@ -48,7 +48,7 @@ int					ft_memcmp(const void *s1, const void *s2, size_t n);
 void				ft_bzero(void *s, size_t n);
 ```
 ### Str functions
-```
+```c
 /* strlcat() appends string src to the end of dst.  It will append at 
 most dstsize - strlen(dst) - 1 characters.  It will then NUL-terminate,
 unless dstsize is 0 or the original dst string was longer than dstsize (in practice this should not happen as it means that either dstsize is
@@ -116,7 +116,7 @@ The array must be ended by a NULL pointer. */
 char				**ft_split(char const *s, char c);
 ```
 ### Lst functions
-```
+```c
 /* Allocates (with malloc(3)) and returns a new element. The variable ’content’ 
 is initialized with the value of the parameter ’content’. 
 The variable ’next’ is initialized to NULL. */
@@ -152,10 +152,10 @@ void				ft_lstiter(t_list *lst, void (*f)(void *));
 element. Creates a new list resulting of the successive applications of the 
 function ’f’. The ’del’ function is used to delete the content of an element 
 if needed.*/
-t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),	void (*del)(void *));
+t_list				*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 ```
 ### Is..? functions
-```
+```c
 int					ft_islower(int c);
 int					ft_isupper(int c);
 int					ft_toupper(int c);
@@ -170,7 +170,7 @@ int					ft_atoi(const char *str);
 char					*ft_itoa(int n);
 ````
 ### Fd functions
-```
+```c
 /* Outputs the character ’c’ to the given file descriptor. */
 void				ft_putchar_fd(char c, int fd);
 
@@ -184,7 +184,7 @@ void				ft_putnbr_fd(int n, int fd);
 void				ft_putendl_fd(char *s, int fd);
 ```
 ### Other functions
-```
+```c
 char				*ft_strcpy(char *dest, char *src);
 char				*ft_strncpy(char *dest, char *src, unsigned int n);
 char				*ft_strcapitalize(char *str);
