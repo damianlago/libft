@@ -10,7 +10,8 @@ $ make
 $ make fclean
 // This will remove all created files.
 ```
-This will produce the file **libft.a**, which you can link to your project.
+This will produce **libft.a** file, which you can link to your project.
+
 ---
 
 ## Functions included
