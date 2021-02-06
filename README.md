@@ -1,4 +1,4 @@
-# libft 
+# **libft**
 
 #### This project is a remake of the standard library in C language.
 
