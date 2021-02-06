@@ -4,8 +4,10 @@
 
 ### Getting Started
 
-$ make 
+```
+make 
 // This will produce the file libft.a, which you can link to your project.
 
-$make fclean
+make fclean
 // This will remove all created files.
+```
