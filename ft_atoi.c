@@ -6,7 +6,7 @@
 /*   By: dlago-mo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 14:55:14 by dlago-mo          #+#    #+#             */
-/*   Updated: 2021/02/04 17:26:28 by dlago-mo         ###   ########.fr       */
+/*   Updated: 2021/02/07 13:05:05 by dlago-mo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 
 int		ft_atoi(const char *str)
 {
-	int			i;
-	unsigned	res;
-	int			sign;
+	int		i;
+	long	res;
+	int		sign;
 
 	i = 0;
 	res = 0;
