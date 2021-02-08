@@ -6,7 +6,7 @@
 /*   By: dlago-mo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 15:41:17 by dlago-mo          #+#    #+#             */
-/*   Updated: 2021/02/07 13:50:00 by dlago-mo         ###   ########.fr       */
+/*   Updated: 2021/02/08 11:41:03 by dlago-mo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (ft_strlen(s) < start)
 		len = 0;
 	s2 = malloc(sizeof(char) * (len + 1));
+	if (s2 == NULL)
+		return (NULL);
 	while (s[i] && i < len)
 	{
 		s2[i] = s[start + i];

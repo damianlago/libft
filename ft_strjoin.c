@@ -6,7 +6,7 @@
 /*   By: dlago-mo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 15:43:04 by dlago-mo          #+#    #+#             */
-/*   Updated: 2021/02/07 14:02:21 by dlago-mo         ###   ########.fr       */
+/*   Updated: 2021/02/08 11:34:34 by dlago-mo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	i = 0;
 	j = 0;
-	len  = ft_strlen((s1) + ft_strlen(s2)) + 1;
-	if (s1 == NULL && s2 == NULL)
+	len = ft_strlen(s1) + ft_strlen(s2);
+	if (s1 == NULL || s2 == NULL)
 		return (NULL);
-	s3 = malloc(len * sizeof(char));
+	s3 = malloc((len + 1) * sizeof(char));
 	if (s3 == NULL)
 		return (NULL);
 	while (s1[i])
