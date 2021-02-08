@@ -4,6 +4,7 @@ This project is a remake of the standard library in C language.
 ---
 
 ## Getting started
+This will produce **libft.a** file, which you can link to your project.
 ```c
 $ git clone https://github.com/damianlago/libft.git
 $ cd libft
@@ -12,8 +13,6 @@ $ make
 $ make fclean
 // This will remove all created files after using the library.
 ```
-This will produce **libft.a** file, which you can link to your project.
-
 ---
 
 ## Functions included
