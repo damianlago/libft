@@ -6,7 +6,7 @@
 /*   By: dlago-mo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 15:44:42 by dlago-mo          #+#    #+#             */
-/*   Updated: 2021/02/08 11:41:45 by dlago-mo         ###   ########.fr       */
+/*   Updated: 2021/02/08 15:41:18 by dlago-mo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*s2;
-	int	i;
+	int		i;
 
 	if (!s1 || !set)
 		return (NULL);
