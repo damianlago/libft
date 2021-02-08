@@ -16,7 +16,12 @@ $ make fclean
 ---
 
 ## Functions included
-[Mem](#mem-functions) [Str](#str-functions) [Lst](#lst-functions) [Is...?](#is...?-functions) [Fd](#fd-functions) [Others](#other-functions)
+[Mem](#mem-functions) 
+[Str](#str-functions) 
+[Lst](#lst-functions) 
+[Is...?](#is...?-functions) 
+[Fd](#fd-functions) 
+[Others](#other-functions)
 ### Mem functions
 ```c
 /* memset function writes len bytes of value c (converted to an unsigned char) 
