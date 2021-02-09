@@ -49,7 +49,7 @@ void				*ft_memchr(const void *s, in c, size_t n);
 
 /* The memcmp() function compares byte string s1 against byte string s2.  
 Both strings are assumed to be n bytes long */
-int					ft_memcmp(const void *s1, const void *s2, size_t n);
+int				ft_memcmp(const void *s1, const void *s2, size_t n);
 
 /* The bzero() function writes n zeroed bytes to the string s.  
 	If n is zero, bzero() does nothing. */
@@ -81,7 +81,7 @@ char				*ft_strnstr(const char *haystack, const char *needle, size_t len);
 /* The strcmp() and strncmp() functions lexicographically compare the 
 null-terminated strings s1 and s2. The strncmp() function compares not more 
 than n characters. */
-int					ft_strncmp(const char *s1, const char *s2, size_t n);
+int				ft_strncmp(const char *s1, const char *s2, size_t n);
 
 /* The strchr() function locates the first occurrence of c (converted to a char) in the string pointed to by s.
      The terminating null character is considered to be part of the string; therefore if c is `\0', the functions
