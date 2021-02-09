@@ -1,69 +1,66 @@
-// #include "libft.h"
-// #include <stdlib.h>
-// #include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dlago-mo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/02/09 11:54:25 by dlago-mo          #+#    #+#             */
+/*   Updated: 2021/02/09 14:30:09 by dlago-mo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-// int ft_words_nbr(char const *s, char c)
-// {
-//         unsigned int i;
-//         unsigned int words;
+#include "libft.h"
 
-//         i = 0;
-//         words = 0;
-//         while (s[i])
-//         {
-//                 if (s[i] != c && (s[i + 1] == c || s[i + 1] == '\0'))
-//                         words++;
-//                 i++;
-//         }
-//         return (words);
-// }
+size_t		ft_words_nbr(char *s, char c)
+{
+	size_t i;
+	size_t count;
 
-// int ft_words_len(char const *s, char c)
-// {
-//         unsigned int i;
-//         unsigned int len;
+	i = 0;
+	count = 1;
+	if (s[i] == (char)c)
+		i++;
+	while (s[i] != '\0')
+	{
+		if (s[i] == (char)c || (s[i] != (char)c && s[i + 1] == '\0'))
+			count++;
+		i++;
+	}
+	return (count);
+}
 
-//         i = 0;
-//         len = 0;
-//         while (s[i] != c && s[i] != '\0')
-//         {
-//                 len++;
-//                 i++;
-//         }
-//         return (len);
-// }
+size_t		ft_words_len(char *s, char c)
+{
+	size_t i;
+	size_t len;
 
-// char **ft_split(char const *s, char c)
-// {
-//         char **s2;
-//         unsigned int i;
-//         unsigned int j;
-//         unsigned int start;
-//         unsigned int words_nbr;
-//         unsigned int words_len;
+	len = 0;
+	i = 0;
+	while (s[i] && s[i] != (char)c)
+	{
+		len++;
+		i++;
+	}
+	return (len);
+}
 
-//         i = 0;
-//         j = 0;
-//         start = 0;
-//         words_nbr = ft_words_nbr(s, c) + 1;
-//         s2 = (char **)malloc(words_nbr * sizeof(char));
-//         while (s[i])
-//         {
-//                 start = i;
-//                 words_len = ft_words_len(s, c) + 1;
-//                 s2[j] = (char *)malloc(words_len * sizeof(char));
-//                 if (s[i] == c)
-//                 {
-//                         ft_strlcpy(s2[j], &s[i], i);
-//                         j++;
-//                         start = i + 1;
-//                 }
-//                 i++;
-//         }
-// }
+char	**ft_split(char const *s, char c)
+{
+	char	**s2;
+	size_t	i;
+	size_t	words_nbr;
 
-// int main(void)
-// {
-//         printf("%p", ft_split("aaaahaaaahaaaa", 'h'));
-//         return (0);
-// }
+	i = 0;
+	words_nbr = ft_words_nbr(((char *)s), c);
+	s2 = malloc(sizeof(char *) * (words_nbr + 1));
+	if (!s)
+		return (NULL);
+	while (i <= words_nbr)
+	{
+		s2[i] = malloc(sizeof(char) * (ft_words_len(((char *)s), c) + 1));
+		ft_strlcpy(s2[i], ((char *)s), ft_words_len(((char *)s), c));
+		i++;
+	}
+	return (s2);
+}
