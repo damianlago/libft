@@ -1,5 +1,5 @@
 # **libft**
-This project is a remake of the standard library in C language. 
+This project is a remake of a few functions of the C standard library as well as some other utility functions. 
 
 ---
 
@@ -12,6 +12,8 @@ $ make
 
 $ make fclean
 // This will remove all created files after using the library.
+$ make re
+// This will execute make after fclean.
 ```
 ---
 
