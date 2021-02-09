@@ -21,7 +21,7 @@ $ make re
 * [Mem](#mem-functions) 
 * [Str](#str-functions) 
 * [Lst](#lst-functions) 
-* [Is...?](#is...-functions) 
+* [Is...?](#is-functions) 
 * [Fd](#fd-functions) 
 * [Others](#other-functions)
 ### Mem functions
