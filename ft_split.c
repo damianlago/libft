@@ -6,61 +6,44 @@
 /*   By: dlago-mo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/09 11:54:25 by dlago-mo          #+#    #+#             */
-/*   Updated: 2021/02/09 14:30:09 by dlago-mo         ###   ########.fr       */
+/*   Updated: 2021/02/09 15:57:55 by dlago-mo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
 
-size_t		ft_words_nbr(char *s, char c)
+int		ft_words_nbr(char *s, char c)
 {
-	size_t i;
-	size_t count;
+	int i;
+	int count;
 
 	i = 0;
-	count = 1;
-	if (s[i] == (char)c)
+	count = 0;
+	while (s[i] == c)
 		i++;
-	while (s[i] != '\0')
+	while (s[i])
 	{
-		if (s[i] == (char)c || (s[i] != (char)c && s[i + 1] == '\0'))
+		if (s[i] == c || (s[i] != c && !s[i + 1]))
 			count++;
 		i++;
 	}
 	return (count);
 }
 
-size_t		ft_words_len(char *s, char c)
-{
-	size_t i;
-	size_t len;
-
-	len = 0;
-	i = 0;
-	while (s[i] && s[i] != (char)c)
-	{
-		len++;
-		i++;
-	}
-	return (len);
-}
-
 char	**ft_split(char const *s, char c)
 {
-	char	**s2;
-	size_t	i;
-	size_t	words_nbr;
+	char **s2;
+	int i;
+	int j;
 
 	i = 0;
-	words_nbr = ft_words_nbr(((char *)s), c);
-	s2 = malloc(sizeof(char *) * (words_nbr + 1));
-	if (!s)
-		return (NULL);
-	while (i <= words_nbr)
-	{
-		s2[i] = malloc(sizeof(char) * (ft_words_len(((char *)s), c) + 1));
-		ft_strlcpy(s2[i], ((char *)s), ft_words_len(((char *)s), c));
-		i++;
-	}
-	return (s2);
+	j = 0;
+	s2 = malloc(sizeof(char) * ft_words_nbr((char *)s, c);
+
+}
+
+int		main(void)
+{
+	printf("%d", ft_words_nbr("aaahaaahaa", 'h'));
+	return (0);
 }
