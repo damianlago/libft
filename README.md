@@ -160,7 +160,7 @@ function ’f’. The ’del’ function is used to delete the content of an ele
 if needed.*/
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 ```
-### Is..? functions
+### Is...? functions
 ```c
 int					ft_islower(int c);
 int					ft_isupper(int c);
