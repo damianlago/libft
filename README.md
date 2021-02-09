@@ -134,7 +134,7 @@ t_list				*ft_lstnew(void *content);
 void				ft_lstadd_front(t_list **lst, t_list *new);
 
 /* Counts the number of elements in a list. */
-int					ft_lstsize(t_list *lst);
+int				ft_lstsize(t_list *lst);
 
 /* Returns the last element of the list.*/
 t_list				*ft_lstlast(t_list *lst);
