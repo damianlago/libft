@@ -10,24 +10,31 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-int		ft_words_nbr(char *s, char c)
+int		ft_words_nbr(char const *s, char c)
 {
-	int i;
 	int count;
 
-	i = 0;
-	count = 0;
-	while (s[i] == c)
-		i++;
-	while (s[i])
+	count = 1;
+	while (*s != '\0')
 	{
-		if (s[i] == c || (s[i] != c && !s[i + 1]))
+		if (*s == c)
 			count++;
-		i++;
+		s++;
 	}
 	return (count);
+}
+
+static char	**ft_free(char **s2, int count)
+{
+	int i;
+
+	i = 0;
+	while (1 < count + 1)
+		free(s2[i++]);
+	free(s2);
+	return (0);
 }
 
 char	**ft_split(char const *s, char c)
@@ -35,15 +42,25 @@ char	**ft_split(char const *s, char c)
 	char **s2;
 	int i;
 	int j;
+	int cont;
 
-	i = 0;
-	j = 0;
-	s2 = malloc(sizeof(char) * ft_words_nbr((char *)s, c);
-
-}
-
-int		main(void)
-{
-	printf("%d", ft_words_nbr("aaahaaahaa", 'h'));
-	return (0);
+	i = -1;
+	cont = 0;
+	if (!s || !(s2 = (char **)malloc(sizeof(char *) * (ft_words_nbr(s, c) + 1))))
+		return (0);
+	while (s[++i] != '\0')
+	{
+		j = i;
+		while (s[j] != c && s[j] != '\0')
+			j++;
+		if (j > i)
+		{
+			if (!(s2[cont] = (char *)malloc(sizeof(char) * (j - i  +1))))
+				return (ft_free(s2, cont));
+			ft_strlcpy(s2[cont++], s + i, j - i + 1);
+			i = j - 1;
+		}
+	}
+	s2[cont] = 0;
+	return (s2);
 }
