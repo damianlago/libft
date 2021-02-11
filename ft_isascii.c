@@ -6,7 +6,7 @@
 /*   By: dlago-mo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 15:03:04 by dlago-mo          #+#    #+#             */
-/*   Updated: 2021/02/04 15:03:32 by dlago-mo         ###   ########.fr       */
+/*   Updated: 2021/02/11 16:43:29 by dlago-mo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		ft_isascii(int c)
 {
-	if ((unsigned char)c >= 0 && (unsigned char)c <= 127)
+	if (c >= 0 && c <= 127)
 		return (1);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: dlago-mo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 15:03:43 by dlago-mo          #+#    #+#             */
-/*   Updated: 2021/02/04 15:04:02 by dlago-mo         ###   ########.fr       */
+/*   Updated: 2021/02/11 16:43:48 by dlago-mo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		ft_isprint(int c)
 {
-	if ((unsigned char)c >= 32 && (unsigned char)c <= 126)
+	if (c >= 32 && c <= 126)
 		return (1);
 	return (0);
 }
