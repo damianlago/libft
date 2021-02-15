@@ -1,12 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dlago-mo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/02/15 17:06:59 by dlago-mo          #+#    #+#             */
+/*   Updated: 2021/02/15 17:07:03 by dlago-mo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-
-typedef struct s_list
-{
-	void *content;
-	struct s_list *next;
-}		t_list;
+#include "libft.h"
 
 t_list	*ft_lstnew(void *content)
 {

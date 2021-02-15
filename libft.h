@@ -6,7 +6,7 @@
 /*   By: dlago-mo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 15:52:35 by dlago-mo          #+#    #+#             */
-/*   Updated: 2021/02/10 17:21:10 by dlago-mo         ###   ########.fr       */
+/*   Updated: 2021/02/15 17:26:13 by dlago-mo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,6 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-
-typedef struct	s_list
-{
-	void *content;
-	struct s_list *next;
-}		t_list;
 
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);

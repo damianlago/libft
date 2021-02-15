@@ -1,12 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dlago-mo <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/02/15 17:06:41 by dlago-mo          #+#    #+#             */
+/*   Updated: 2021/02/15 17:16:21 by dlago-mo         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-
-typedef struct s_list
-{
-	void *content;
-	struct s_list *next;
-} 		t_list;
+#include "libft.h"
 
 void	ft_lstadd_front(t_list **alst, t_list *new)
 {
@@ -15,9 +19,4 @@ void	ft_lstadd_front(t_list **alst, t_list *new)
 		new->next = *alst;
 		*alst = new;
 	}
-}
-
-int	main(void)
-{
-	return (0);
 }
