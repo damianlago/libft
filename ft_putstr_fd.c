@@ -6,18 +6,19 @@
 /*   By: dlago-mo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 15:47:04 by dlago-mo          #+#    #+#             */
-/*   Updated: 2021/02/04 15:47:32 by dlago-mo         ###   ########.fr       */
+/*   Updated: 2021/02/15 18:49:57 by dlago-mo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
 void	ft_putstr_fd(char *s, int fd)
 {
 	int i;
 
 	i = 0;
+	if (!s)
+		return ;
 	while (s[i] != '\0')
 	{
 		ft_putchar_fd(s[i], fd);
