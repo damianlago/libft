@@ -17,7 +17,7 @@ $(NAME): $(OBJS)
 
 all:	$(NAME)
 
-bonus:	$(OBJS_BONUS)
+bonus:	$(SRC_BONUS) $(OBJS_BONUS)
 	ar -rc $(NAME) $(OBJS_BONUS)
 
 clean:
