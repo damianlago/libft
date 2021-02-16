@@ -6,19 +6,13 @@
 /*   By: dlago-mo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/15 17:08:34 by dlago-mo          #+#    #+#             */
-/*   Updated: 2021/02/15 17:16:16 by dlago-mo         ###   ########.fr       */
+/*   Updated: 2021/02/16 16:27:52 by dlago-mo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+// #include "libft.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
-{
-	t_list *aux;
+// void	ft_lstadd_back(t_list **lst, t_list *new)
+// {
 
-	if (lst && new)
-	{
-		aux = ft_lstlast(*lst);
-		aux->next = new;
-	}
-}
+// }

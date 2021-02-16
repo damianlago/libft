@@ -23,10 +23,10 @@ t_list	*ft_lstnew(void *content)
 	return (new_nodo);
 }
 
-int	main(void)
-{
-	char new[] = "Hola";
-	t_list *nodo = ft_lstnew((void *)new);
-	printf("%s", nodo->content);
-	return (0);
-}
+// int	main(void)
+// {
+// 	char new[] = "Hola";
+// 	t_list *nodo = ft_lstnew((void *)new);
+// 	printf("%s", nodo->content);
+// 	return (0);
+// }

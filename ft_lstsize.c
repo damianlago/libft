@@ -6,7 +6,7 @@
 /*   By: dlago-mo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/15 17:07:09 by dlago-mo          #+#    #+#             */
-/*   Updated: 2021/02/15 17:20:12 by dlago-mo         ###   ########.fr       */
+/*   Updated: 2021/02/16 16:26:16 by dlago-mo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	usigned int i;
+	unsigned int i;
 
 	i = 0;
 	while (lst)
