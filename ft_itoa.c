@@ -6,7 +6,7 @@
 /*   By: dlago-mo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 15:55:59 by dlago-mo          #+#    #+#             */
-/*   Updated: 2021/02/18 17:32:15 by dlago-mo         ###   ########.fr       */
+/*   Updated: 2021/03/12 12:38:49 by dlago-mo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ size_t	ft_len(long nb)
 	size_t	len;
 
 	len = 0;
+	if (nb == 0)
+		return (1);
 	if (nb < 0)
 	{
 		nb *= -1;
@@ -43,7 +45,6 @@ char	*ft_itoa(int n)
 	s[len--] = '\0';
 	if (nb == 0)
 	{
-		s = ft_calloc(2, sizeof(char));
 		s[0] = 48;
 	}
 	if (nb < 0)
