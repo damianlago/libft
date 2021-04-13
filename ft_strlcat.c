@@ -6,16 +6,16 @@
 /*   By: dlago-mo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 14:45:14 by dlago-mo          #+#    #+#             */
-/*   Updated: 2021/02/05 15:43:38 by dlago-mo         ###   ########.fr       */
+/*   Updated: 2021/04/13 13:57:40 by dlago-mo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t		ft_strlcat(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t i;
-	size_t j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	j = ft_strlen(dst) + ft_strlen(src);

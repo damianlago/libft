@@ -6,7 +6,7 @@
 /*   By: dlago-mo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 14:52:56 by dlago-mo          #+#    #+#             */
-/*   Updated: 2021/02/05 13:42:35 by dlago-mo         ###   ########.fr       */
+/*   Updated: 2021/04/13 13:59:23 by dlago-mo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	size_t i;
+	size_t	i;
 
 	if (*needle == '\0')
 		return ((char *)haystack);

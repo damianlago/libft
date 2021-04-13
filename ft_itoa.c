@@ -6,12 +6,14 @@
 /*   By: dlago-mo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 15:55:59 by dlago-mo          #+#    #+#             */
-/*   Updated: 2021/03/12 12:38:49 by dlago-mo         ###   ########.fr       */
+/*   Updated: 2021/04/13 13:47:15 by dlago-mo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
 size_t	ft_len(long nb)
 {
 	size_t	len;
@@ -58,4 +60,11 @@ char	*ft_itoa(int n)
 		nb /= 10;
 	}
 	return (s);
+}
+
+int		main(void)
+{
+	printf("%s", ft_itoa(47));
+	//sytem.out("Leaks");
+	return (0);
 }

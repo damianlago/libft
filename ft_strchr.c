@@ -6,7 +6,7 @@
 /*   By: dlago-mo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 14:46:21 by dlago-mo          #+#    #+#             */
-/*   Updated: 2021/02/04 14:47:10 by dlago-mo         ###   ########.fr       */
+/*   Updated: 2021/04/13 13:57:17 by dlago-mo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	unsigned int i;
+	unsigned int	i;
 
 	i = 0;
 	while (i <= ft_strlen(s))

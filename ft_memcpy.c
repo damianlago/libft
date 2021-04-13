@@ -6,7 +6,7 @@
 /*   By: dlago-mo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 14:32:18 by dlago-mo          #+#    #+#             */
-/*   Updated: 2021/02/15 18:25:01 by dlago-mo         ###   ########.fr       */
+/*   Updated: 2021/04/13 14:01:18 by dlago-mo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	if (!src && !dst)

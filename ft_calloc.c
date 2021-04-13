@@ -6,7 +6,7 @@
 /*   By: dlago-mo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 15:38:46 by dlago-mo          #+#    #+#             */
-/*   Updated: 2021/02/04 15:39:33 by dlago-mo         ###   ########.fr       */
+/*   Updated: 2021/04/13 13:50:09 by dlago-mo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	void *aux;
+	void	*aux;
 
 	aux = malloc(count * size);
 	if (aux == NULL)

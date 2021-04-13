@@ -6,13 +6,13 @@
 /*   By: dlago-mo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 15:04:43 by dlago-mo          #+#    #+#             */
-/*   Updated: 2021/02/04 16:57:00 by dlago-mo         ###   ########.fr       */
+/*   Updated: 2021/04/13 14:00:03 by dlago-mo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_toupper(int c)
+int	ft_toupper(int c)
 {
 	if (c >= 97 && c <= 122)
 		return (c - 32);
