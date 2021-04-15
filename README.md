@@ -19,10 +19,10 @@ $ make re
 
 ## Functions included
 * [Mem](#mem-functions) 
-* [Str](#str-functions) 
-* [Lst](#lst-functions) 
+* [String](#str-functions) 
+* [List](#lst-functions) 
 * [Is...?](#is-functions) 
-* [Fd](#fd-functions) 
+* [File descriptor](#fd-functions) 
 * [Others](#other-functions)
 ### Mem functions
 ```c
