@@ -6,7 +6,7 @@
 /*   By: dlago-mo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/20 17:54:34 by dlago-mo          #+#    #+#             */
-/*   Updated: 2021/04/20 17:55:42 by dlago-mo         ###   ########.fr       */
+/*   Updated: 2021/04/21 09:27:14 by dlago-mo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	while(lst)
+	while (lst)
 	{
 		f(lst->content);
 		lst = lst->next;

@@ -5,11 +5,12 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*alst;
 	t_list	*aux;
 
+	(void)(*del);
 	if (!f || !lst)
 		return (NULL);
 	aux = ft_lstnew(f(lst->content));
 	if (!aux)
-		return (NULL);;
+		return (NULL);
 	alst = aux;
 	while (lst->next)
 	{
